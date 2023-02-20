@@ -51,15 +51,15 @@ def handle_text_message(event):
         line_bot_api.reply_message(
             event.reply_token,
             [
-                TextSendMessage(text="From: " + profile.display_name),
-                TextSendMessage(text="Received message: " + text)
+                TextSendMessage(text="あなたの名前は " + profile.display_name),
+                TextSendMessage(text="あなたからのメッセージ： " + text)
             ],
         )
     else:
         line_bot_api.reply_message(
             event.reply_token,
             [
-                TextSendMessage(text="Received message: " + text)
+                TextSendMessage(text="あなたからのメッセージ： " + text)
             ]
         )
 
